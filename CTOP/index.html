@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTOP 2-17-Laila Husna Nafisatu Aliyyah</title>
+    <style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(bgon.jpg);
+    background-size: cover;
+    overflow: hidden;
+    }
+
+    hr {
+    border-top: 3px dashed;
+    }
+
+    .container {
+    background-color: rgb(241, 97, 57);
+    filter: opacity(90%);
+    padding: 10px;
+    border-radius: 8px;
+    border-style: dashed;
+    width:80%;
+    max-width: 1200px;
+    max-height: 100vh;
+    overflow: auto;
+    }
+
+    h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 18px;
+    }
+
+    .button-container {
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    margin-top: 2px;
+    }
+
+    .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    }
+
+    .input-group input[type="radio"] {
+    margin-right: 10px;
+    }
+
+    #KetikAngka { 
+    margin-left: auto; 
+    padding: 6px;
+    width: 46%;
+    }
+
+    button {
+    display: flex;           
+    align-items: center; 
+    height: 30px;
+    width: 100px;
+    margin: 0 10px;        
+    border-radius: 5px;   
+    cursor: pointer;
+    border: 1px solid;
+    }
+
+    button:hover {
+    background-color: #ff8183;
+    }
+
+    label,
+    textarea, 
+    select, 
+    #namapembeli, #Kode_pos, #Tanggal_Beli {
+    width: 100%;
+    }
+
+    input[type="text"], 
+    input[type="date"], 
+    textarea, 
+    select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    }
+
+    .menu {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    }
+
+    .menu label {
+    width: 55%;
+    font-size: 14px;
+    }
+
+    .menu input[type="number"] {
+    width: 50%;
+    margin-left: 5px;
+    padding: 5px; 
+    }
+
+    @media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    label, h2 {
+        font-size: 14px;
+    }
+
+    .menu label {
+        width: 50%;
+    }
+
+    .menu input[type="text"] {
+        width: 60%;
+    }
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Nota Pembelian</h2><hr>
+        <form>
+            <label for="nama_pembeli">Nama Pembeli</label>
+            <input type="text" id="namapembeli"
+            placeholder="ketikkan nama kamu">
+    
+        <br>
+        
+        <label for="alamat_pembeli">Alamat Pembeli</label><br>
+        <textarea id="alamat_pembeli" name="alamat_pembeli"
+        placeholder="ketikkan alamatmu"></textarea>
+
+        <br>
+
+        <label for="Kode_Pos">Kode Pos</label>
+        <br>
+        <input type="text" list="Kode_pos" placeholder="kode pos alamat kamu">
+        <datalist id="Kode_pos">
+            <option value="50614">50614</option>
+            <option value="50613">50613</option>
+            <option value="50612">50612</option>
+            <option value="50611">50611</option>
+            <option value="50182">50182</option>
+            <option value="50125">50125</option>
+            <option value="50663">50663</option>
+            <option value="50661">50661</option>
+            <option value="50664">50664</option>
+            <option value="50264">50264</option>
+            <option value="50266">50266</option>
+            <option value="50261">50261</option>
+            <option value="50262">50262</option>
+            <option value="50552">50552</option>
+            <option value="50256">50256</option>
+        </datalist>
+
+        <br>
+        
+        <label for="Tanggal_Beli">Tanggal Beli</label><br>
+        <input type="date" id="Tanggal_Beli" name="Tanggal_Beli"
+
+        <br>
+
+        <label for="Pembayaran">Pembayaran</label><br>
+        <div class="input-group">
+            <input type="radio" id="PembayaranLunas" name="Pembayaran" value="Lunas">Lunas
+            <input type="radio"  id="PembayaranBelum" name="Pembayaran" value="Belum Bayar">Belum Bayar
+            <input type="radio" id="PembayaranDP" name="Pembayaran" value="DP">DP
+            <input type="number" id="KetikAngka" name="Angka_DP"  placeholder="ketikkan angka uang DP" class="dp">
+        <br>
+        </div>
+        
+        <label for="Jenis_Pembayaran">Jenis Pembayaran</label><br>
+        <select name="Jenis_Pembayaran" id="Jenis_Pembayaran">
+            <option value="Pilih">Pilih</option>
+            <option value="Tunai">Tunai</option>
+            <option value="Transfer">Transfer</option>
+        </select>
+
+         <br>
+        <div class="menu">
+            <input type="checkbox" id="NasiGoreng" name="NasiGoreng" value="NasiGoreng">
+            <label for="JumlahNasiGoreng">Nasi Goreng</label>
+            <input type="number" id="JumlahNasiGoreng" name="Jumlah_NasiGoreng" 
+            placeholder="Jumlah pesanan">
+        </div>
+
+        <div class="menu">
+            <input type="checkbox" id="Seblak" name="NasiRuwet" value="Seblak">
+            <label for="JumlahSeblak">Seblak</label>
+            <input type="number" id="JumlahSeblak" name="Jumlah_Seblak" 
+            placeholder="Jumlah pesanan">
+        </div>
+
+        <div class="menu">
+            <input type="checkbox" id="Dimsum" name="BakmiRebus" value="Dimsum">
+            <label for="JumlahDimsum">Dimsum</label>
+            <input type="number" id="JumlahDimsum" name="Jumlah_Dimsum" 
+            placeholder="Jumlah pesanan">
+        </div>
+
+        <div class="menu">
+            <input type="checkbox" id="Teh" name="BakmiGoreng" value="Teh">
+            <label for="">Teh</label>
+            <input type="number" id="JumlahTeh" name="Teh" 
+            placeholder="Jumlah pesanan">
+        </div>
+
+        <div class="button-container">
+            <button type="button" onclick="this.form.reset()">Clear</button>
+         <div class="third">
+         
+            <button>Send</button>
+                </div>
+            </div>
+         </div>
+        </div>
+    </form>
+</body>
+</html>
